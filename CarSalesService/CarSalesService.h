@@ -1,6 +1,12 @@
-//file: CarSalesService.h
-//Header file for CarSalesService.cpp containing constant fields
-//author Ethan Kramer
+/**
+ * @file CarSalesService.h
+ * @brief main header file for the program
+ * 
+ * contains constant fields for car objects as well as fields replacing "magic numbers"
+ * 
+ * @author Ethan Kramer
+ * @bug No known bugs.
+*/
 
 
 #ifndef CARSALESSERVICE_H

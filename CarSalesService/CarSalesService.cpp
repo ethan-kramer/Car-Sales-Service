@@ -1,8 +1,14 @@
-//file: CarSalesService.cpp
-//Main implementation file for CarSalesService
-//author: Ethan Kramer
-
+/**
+ * @file CarSalesService.cpp
+ * @brief Main implementation file for the program
+ * 
+ * Contains main function, list of car objects, and functions necessary for the program to run smoothly
+ * 
+ * @author Ethan Kramer
+ * @bug No known bugs.
+*/
  
+
 //																Notes
 //--------------------------------------------------------------------------------------------------------------------------------
 //LO4. Include a comment in which you compare and contrast the procedural/functional approach and the object-oriented approach

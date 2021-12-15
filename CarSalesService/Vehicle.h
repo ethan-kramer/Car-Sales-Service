@@ -1,6 +1,13 @@
-//file: Car.h
-//Header file for Car class containing private and public fields and methods
-//author: Ethan Kramer
+/**
+ * @file Vehicle.h
+ * @brief header file for class Vehicle
+ *
+ * Contains fields and methods for vehicle objects
+ *
+ * @author Ethan Kramer
+ * @bug No known bugs.
+*/
+
  //LO1. Design and implement a class.  
 	//LO1a. At least one class in a header file with non-trivial methods implemented in a cpp file
 

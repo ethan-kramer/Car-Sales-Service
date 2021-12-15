@@ -1,7 +1,12 @@
-//file: Car.h
-//Header file for Car class containing private and public fields and methods
-//author: Ethan Kramer
-
+/**
+ * @file Car.h
+ * @brief header file for class Car
+ *
+ * Contains fields, constructors and methods for car objects
+ *
+ * @author Ethan Kramer
+ * @bug No known bugs.
+*/
 
 
 #ifndef CAR_H

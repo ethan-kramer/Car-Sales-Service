@@ -1,6 +1,12 @@
-//file: Car.h
-//Header file for Truck class containing private and public fields and methods
-//author: Ethan Kramer
+/**
+ * @file Truck.h
+ * @brief header file for class Truck
+ *
+ * Contains fields, constructors and methods for truck objects
+ *
+ * @author Ethan Kramer
+ * @bug No known bugs.
+*/
 
 
 #ifndef TRUCK_H
