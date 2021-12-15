@@ -1,0 +1,118 @@
+\hypertarget{_car_sales_service_8cpp}{}\doxysection{Car\+Sales\+Service.\+cpp File Reference}
+\label{_car_sales_service_8cpp}\index{CarSalesService.cpp@{CarSalesService.cpp}}
+
+
+Main implementation file for the program.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Car\+Sales\+Service.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Car.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Truck.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Vehicle.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_car_sales_service_8cpp_ae011f448641846b1f28b2ebb30cd738f}\label{_car_sales_service_8cpp_ae011f448641846b1f28b2ebb30cd738f}} 
+void {\bfseries over\+\_\+the\+\_\+top\+\_\+greeting} ()
+\begin{DoxyCompactList}\small\item\em function printing welcome message \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_car_sales_service_8cpp_ae91d4cbee2dab64187187499dd0eecd4}\label{_car_sales_service_8cpp_ae91d4cbee2dab64187187499dd0eecd4}} 
+void {\bfseries print\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em function printing menu options \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_car_sales_service_8cpp_a58923ee677257a96198aad15f2321241}{print\+\_\+stock}} (std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$stock)
+\begin{DoxyCompactList}\small\item\em prints names of all vehicles in stock numbered ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_car_sales_service_8cpp_a9edffb469f4975b27847c8b55d4068fc}{browse\+\_\+cars}} (std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$stock)
+\begin{DoxyCompactList}\small\item\em function allowing user to browse cars in stock \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_car_sales_service_8cpp_a7354e935a3380d2abd7fa87e50a57e02}{finance\+\_\+car}} (double p)
+\begin{DoxyCompactList}\small\item\em function to determine financed price for car \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_car_sales_service_8cpp_a5b15e92bf8d18ccafbbdc8ece606c651}{take\+\_\+payment}} ()
+\begin{DoxyCompactList}\small\item\em simulates taking a credit card payment for a car \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{_car_sales_service_8cpp_a8216c1645620cdb2f629cde3ac02ffef}{main}} () -\/$>$ int
+\begin{DoxyCompactList}\small\item\em main function for the program \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main implementation file for the program. 
+
+Contains main function, list of car objects, and functions necessary for the program to run smoothly
+
+\begin{DoxyAuthor}{Author}
+Ethan Kramer 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_car_sales_service_8cpp_a9edffb469f4975b27847c8b55d4068fc}\label{_car_sales_service_8cpp_a9edffb469f4975b27847c8b55d4068fc}} 
+\index{CarSalesService.cpp@{CarSalesService.cpp}!browse\_cars@{browse\_cars}}
+\index{browse\_cars@{browse\_cars}!CarSalesService.cpp@{CarSalesService.cpp}}
+\doxysubsubsection{\texorpdfstring{browse\_cars()}{browse\_cars()}}
+{\footnotesize\ttfamily void browse\+\_\+cars (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{stock }\end{DoxyParamCaption})}
+
+
+
+function allowing user to browse cars in stock 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & (array of type \mbox{\hyperlink{class_vehicle}{Vehicle}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_car_sales_service_8cpp_a7354e935a3380d2abd7fa87e50a57e02}\label{_car_sales_service_8cpp_a7354e935a3380d2abd7fa87e50a57e02}} 
+\index{CarSalesService.cpp@{CarSalesService.cpp}!finance\_car@{finance\_car}}
+\index{finance\_car@{finance\_car}!CarSalesService.cpp@{CarSalesService.cpp}}
+\doxysubsubsection{\texorpdfstring{finance\_car()}{finance\_car()}}
+{\footnotesize\ttfamily void finance\+\_\+car (\begin{DoxyParamCaption}\item[{double}]{p }\end{DoxyParamCaption})}
+
+
+
+function to determine financed price for car 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & (price field of a given car object) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_car_sales_service_8cpp_a8216c1645620cdb2f629cde3ac02ffef}\label{_car_sales_service_8cpp_a8216c1645620cdb2f629cde3ac02ffef}} 
+\index{CarSalesService.cpp@{CarSalesService.cpp}!main@{main}}
+\index{main@{main}!CarSalesService.cpp@{CarSalesService.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily auto main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ int   }
+
+
+
+main function for the program 
+
+\begin{DoxyReturn}{Returns}
+int (0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_car_sales_service_8cpp_a58923ee677257a96198aad15f2321241}\label{_car_sales_service_8cpp_a58923ee677257a96198aad15f2321241}} 
+\index{CarSalesService.cpp@{CarSalesService.cpp}!print\_stock@{print\_stock}}
+\index{print\_stock@{print\_stock}!CarSalesService.cpp@{CarSalesService.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_stock()}{print\_stock()}}
+{\footnotesize\ttfamily void print\+\_\+stock (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{stock }\end{DoxyParamCaption})}
+
+
+
+prints names of all vehicles in stock numbered ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & (array of type \mbox{\hyperlink{class_vehicle}{Vehicle}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_car_sales_service_8cpp_a5b15e92bf8d18ccafbbdc8ece606c651}\label{_car_sales_service_8cpp_a5b15e92bf8d18ccafbbdc8ece606c651}} 
+\index{CarSalesService.cpp@{CarSalesService.cpp}!take\_payment@{take\_payment}}
+\index{take\_payment@{take\_payment}!CarSalesService.cpp@{CarSalesService.cpp}}
+\doxysubsubsection{\texorpdfstring{take\_payment()}{take\_payment()}}
+{\footnotesize\ttfamily void take\+\_\+payment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+simulates taking a credit card payment for a car 
+
+gets credit card number, expiration date, and cvv code from user and prints to confirm able to loop back to re-\/enter information if incorrect 

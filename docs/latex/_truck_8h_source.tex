@@ -1,77 +1,73 @@
 \hypertarget{_truck_8h_source}{}\doxysection{Truck.\+h}
-
+\mbox{\hyperlink{_truck_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{//file: Car.h}}
-\DoxyCodeLine{2 \textcolor{comment}{//Header file for Truck class containing private and public fields and methods}}
-\DoxyCodeLine{3 \textcolor{comment}{//author: Ethan Kramer}}
-\DoxyCodeLine{4 }
-\DoxyCodeLine{5 }
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef TRUCK\_H}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#define TRUCK\_H}}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Vehicle.h"{}}}
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_truck}{Truck}} :}
-\DoxyCodeLine{12     \textcolor{keyword}{public} \mbox{\hyperlink{class_vehicle}{Vehicle}}}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14 \textcolor{keyword}{private}:    \textcolor{comment}{// ENCAPSULATION: private and public fields/members}}
-\DoxyCodeLine{15     \textcolor{keywordtype}{double} bed\_size;}
-\DoxyCodeLine{16     \textcolor{keywordtype}{int} towing\_capacity;}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18 \textcolor{keyword}{public}:}
-\DoxyCodeLine{19     \textcolor{comment}{//setters}}
-\DoxyCodeLine{20     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{21     \textcolor{keywordtype}{void} set\_bed\_size(\textcolor{keywordtype}{double} s) \textcolor{keyword}{noexcept} \{ bed\_size = s; \}}
-\DoxyCodeLine{22     \textcolor{keywordtype}{void} set\_towing\_capacity(\textcolor{keywordtype}{int} c) \textcolor{keyword}{noexcept} \{towing\_capacity = c; \}}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef TRUCK\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define TRUCK\_H}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vehicle_8h}{Vehicle.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_truck}{Truck}} :}
+\DoxyCodeLine{18     \textcolor{keyword}{public} \mbox{\hyperlink{class_vehicle}{Vehicle}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:    \textcolor{comment}{// ENCAPSULATION: private and public fields/members}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{double} bed\_size;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} towing\_capacity;}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25     \textcolor{comment}{//getters}}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{comment}{//setters}}
 \DoxyCodeLine{26     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{27     \textcolor{keyword}{auto} get\_bed\_size() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{double} \{ \textcolor{keywordflow}{return} bed\_size; \}}
-\DoxyCodeLine{28     \textcolor{keywordtype}{int} get\_towing\_capacity() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} towing\_capacity; \}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} set\_bed\_size(\textcolor{keywordtype}{double} s) \textcolor{keyword}{noexcept} \{ bed\_size = s; \}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} set\_towing\_capacity(\textcolor{keywordtype}{int} c) \textcolor{keyword}{noexcept} \{towing\_capacity = c; \}}
 \DoxyCodeLine{29 }
 \DoxyCodeLine{30 }
-\DoxyCodeLine{31     \textcolor{comment}{//constructors}}
+\DoxyCodeLine{31     \textcolor{comment}{//getters}}
 \DoxyCodeLine{32     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{33     \mbox{\hyperlink{class_truck}{Truck}}() \textcolor{keyword}{noexcept} \{}
-\DoxyCodeLine{34         bed\_size = 0.0;}
-\DoxyCodeLine{35         towing\_capacity = 0;}
-\DoxyCodeLine{36     \}  \textcolor{comment}{//default constructor}}
-\DoxyCodeLine{37 }
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39     \textcolor{comment}{//LO1b.Overload a constructor}}
-\DoxyCodeLine{40     \textcolor{comment}{//LO1c.Utilize an initialization list}}
-\DoxyCodeLine{41     \mbox{\hyperlink{class_truck}{Truck}}(std::string n, \textcolor{keywordtype}{double} p, \textcolor{keywordtype}{int} m, \textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} d, \textcolor{keywordtype}{double} bs, \textcolor{keywordtype}{int} tc) \{}
-\DoxyCodeLine{42         set\_name(n);}
-\DoxyCodeLine{43         set\_price(p);}
-\DoxyCodeLine{44         set\_miles(m);}
-\DoxyCodeLine{45         set\_accidents(a);}
-\DoxyCodeLine{46         set\_num\_seats(s);}
-\DoxyCodeLine{47         set\_num\_doors(d);}
-\DoxyCodeLine{48         set\_bed\_size(bs);}
-\DoxyCodeLine{49         set\_towing\_capacity(tc);    }
-\DoxyCodeLine{50     \}   \textcolor{comment}{//overloaded constructor}}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55     \textcolor{comment}{//methods}}
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{63 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_truck_a7d6f5df54ae4ee43e5d6e34392fa2813}{print\_stats}}()\textcolor{keyword}{ override }\{}
-\DoxyCodeLine{64         std::cout << get\_name() << std::endl;}
-\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Price: \$"{}} << get\_price() << std::endl;}
-\DoxyCodeLine{66         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Miles: "{}} << get\_miles() << std::endl;}
-\DoxyCodeLine{67         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Accidents: "{}} << get\_accidents() << std::endl;}
-\DoxyCodeLine{68         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Transmission Type: Automatic"{}} << std::endl;}
-\DoxyCodeLine{69         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Seats: "{}} << get\_num\_seats() << std::endl;}
-\DoxyCodeLine{70         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Doors: "{}} << get\_num\_doors() << std::endl;}
-\DoxyCodeLine{71         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Leather Seats: No"{}} << std::endl;}
-\DoxyCodeLine{72         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Bed Size: "{}} << get\_bed\_size() << \textcolor{stringliteral}{"{}''"{}} << std::endl;}
-\DoxyCodeLine{73         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Towing Capacity: "{}} << get\_towing\_capacity() << std::endl;}
-\DoxyCodeLine{74     \}}
-\DoxyCodeLine{75 \};}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{33     \textcolor{keyword}{auto} get\_bed\_size() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{double} \{ \textcolor{keywordflow}{return} bed\_size; \}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} get\_towing\_capacity() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} towing\_capacity; \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{//constructors}}
+\DoxyCodeLine{38     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_truck}{Truck}}() \textcolor{keyword}{noexcept} \{}
+\DoxyCodeLine{40         bed\_size = 0.0;}
+\DoxyCodeLine{41         towing\_capacity = 0;}
+\DoxyCodeLine{42     \}  \textcolor{comment}{//default constructor}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{//LO1b.Overload a constructor}}
+\DoxyCodeLine{46     \textcolor{comment}{//LO1c.Utilize an initialization list}}
+\DoxyCodeLine{47     \mbox{\hyperlink{class_truck}{Truck}}(std::string n, \textcolor{keywordtype}{double} p, \textcolor{keywordtype}{int} m, \textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} d, \textcolor{keywordtype}{double} bs, \textcolor{keywordtype}{int} tc) \{}
+\DoxyCodeLine{48         set\_name(n);}
+\DoxyCodeLine{49         set\_price(p);}
+\DoxyCodeLine{50         set\_miles(m);}
+\DoxyCodeLine{51         set\_accidents(a);}
+\DoxyCodeLine{52         set\_num\_seats(s);}
+\DoxyCodeLine{53         set\_num\_doors(d);}
+\DoxyCodeLine{54         set\_bed\_size(bs);}
+\DoxyCodeLine{55         set\_towing\_capacity(tc);    }
+\DoxyCodeLine{56     \}   \textcolor{comment}{//overloaded constructor}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{//methods}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{69 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_truck_a7d6f5df54ae4ee43e5d6e34392fa2813}{print\_stats}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{70         std::cout << get\_name() << std::endl;}
+\DoxyCodeLine{71         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Price: \$"{}} << get\_price() << std::endl;}
+\DoxyCodeLine{72         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Miles: "{}} << get\_miles() << std::endl;}
+\DoxyCodeLine{73         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Accidents: "{}} << get\_accidents() << std::endl;}
+\DoxyCodeLine{74         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Transmission Type: Automatic"{}} << std::endl;}
+\DoxyCodeLine{75         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Seats: "{}} << get\_num\_seats() << std::endl;}
+\DoxyCodeLine{76         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Doors: "{}} << get\_num\_doors() << std::endl;}
+\DoxyCodeLine{77         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Leather Seats: No"{}} << std::endl;}
+\DoxyCodeLine{78         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Bed Size: "{}} << get\_bed\_size() << \textcolor{stringliteral}{"{}''"{}} << std::endl;}
+\DoxyCodeLine{79         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Towing Capacity: "{}} << get\_towing\_capacity() << std::endl;}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

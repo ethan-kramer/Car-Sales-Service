@@ -1,74 +1,72 @@
 \hypertarget{_vehicle_8h_source}{}\doxysection{Vehicle.\+h}
-
+\mbox{\hyperlink{_vehicle_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{//file: Car.h}}
-\DoxyCodeLine{2 \textcolor{comment}{//Header file for Car class containing private and public fields and methods}}
-\DoxyCodeLine{3 \textcolor{comment}{//author: Ethan Kramer}}
-\DoxyCodeLine{4  \textcolor{comment}{//LO1. Design and implement a class.  }}
-\DoxyCodeLine{5     \textcolor{comment}{//LO1a. At least one class in a header file with non-\/trivial methods implemented in a cpp file}}
-\DoxyCodeLine{6 }
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef VEHICLE\_H}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#define VEHICLE\_H}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_vehicle}{Vehicle}}}
-\DoxyCodeLine{14 \{}
-\DoxyCodeLine{15     \textcolor{comment}{//LO6. Use object-\/oriented encapsulation mechanisms such as interfaces and private members.}}
-\DoxyCodeLine{16 \textcolor{keyword}{private}:        \textcolor{comment}{// ENCAPSULATION: private and public fields/members}}
-\DoxyCodeLine{17     \textcolor{comment}{//fields}}
-\DoxyCodeLine{18     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{19     std::string name;}
-\DoxyCodeLine{20     \textcolor{keywordtype}{double} price = 0;}
-\DoxyCodeLine{21     \textcolor{keywordtype}{int} num\_doors = 0;}
-\DoxyCodeLine{22     \textcolor{keywordtype}{bool} leather\_seats = \textcolor{keyword}{true};}
-\DoxyCodeLine{23     \textcolor{keywordtype}{int} miles = 0;}
-\DoxyCodeLine{24     \textcolor{keywordtype}{int} accidents = 0;}
-\DoxyCodeLine{25     \textcolor{keywordtype}{int} num\_seats = 0;}
-\DoxyCodeLine{26     }
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28 \textcolor{keyword}{public}:}
-\DoxyCodeLine{29     \textcolor{comment}{//setters}}
-\DoxyCodeLine{30         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{31     \textcolor{keywordtype}{void} set\_name(std::string n) \{ name = n; \}}
-\DoxyCodeLine{32     \textcolor{keywordtype}{void} set\_price(\textcolor{keywordtype}{double} p) \textcolor{keyword}{noexcept} \{ price = p; \}}
-\DoxyCodeLine{33     \textcolor{keywordtype}{void} set\_num\_doors(\textcolor{keywordtype}{int} d) \textcolor{keyword}{noexcept} \{ num\_doors = d; \}}
-\DoxyCodeLine{34     \textcolor{keywordtype}{void} set\_leather\_seats(\textcolor{keywordtype}{bool} s) \textcolor{keyword}{noexcept} \{ leather\_seats = s; \}}
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} set\_miles(\textcolor{keywordtype}{int} m) \textcolor{keyword}{noexcept} \{ miles = m; \}}
-\DoxyCodeLine{36     \textcolor{keywordtype}{void} set\_accidents(\textcolor{keywordtype}{int} a) \textcolor{keyword}{noexcept} \{ accidents = a; \}}
-\DoxyCodeLine{37     \textcolor{keywordtype}{void} set\_num\_seats(\textcolor{keywordtype}{int} n) \textcolor{keyword}{noexcept} \{ num\_seats = n; \}}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39     \textcolor{comment}{//getters}}
-\DoxyCodeLine{40     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{41     std::string get\_name() \{ \textcolor{keywordflow}{return} name; \}}
-\DoxyCodeLine{42     \textcolor{keywordtype}{double} get\_price() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} price; \}}
-\DoxyCodeLine{43     \textcolor{keywordtype}{double} get\_num\_doors() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} num\_doors; \}}
-\DoxyCodeLine{44     \textcolor{keywordtype}{bool} get\_leather\_seats() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} leather\_seats; \}}
-\DoxyCodeLine{45     \textcolor{keywordtype}{int} get\_miles() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} miles; \}}
-\DoxyCodeLine{46     \textcolor{keyword}{auto} get\_accidents() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{int} \{ \textcolor{keywordflow}{return} accidents; \}}
-\DoxyCodeLine{47     \textcolor{keyword}{auto} get\_num\_seats() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{int} \{ \textcolor{keywordflow}{return} num\_seats; \}}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49     }
-\DoxyCodeLine{50     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52     \textcolor{comment}{//methods}}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{54     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11  \textcolor{comment}{//LO1. Design and implement a class.  }}
+\DoxyCodeLine{12     \textcolor{comment}{//LO1a. At least one class in a header file with non-\/trivial methods implemented in a cpp file}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef VEHICLE\_H}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define VEHICLE\_H}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_vehicle}{Vehicle}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{comment}{//LO6. Use object-\/oriented encapsulation mechanisms such as interfaces and private members.}}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:        \textcolor{comment}{// ENCAPSULATION: private and public fields/members}}
+\DoxyCodeLine{24     \textcolor{comment}{//fields}}
+\DoxyCodeLine{25     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{26     std::string name;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{double} price = 0;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} num\_doors = 0;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} leather\_seats = \textcolor{keyword}{true};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} miles = 0;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} accidents = 0;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} num\_seats = 0;}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \textcolor{comment}{//setters}}
+\DoxyCodeLine{37         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} set\_name(std::string n) \{ name = n; \}}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} set\_price(\textcolor{keywordtype}{double} p) \textcolor{keyword}{noexcept} \{ price = p; \}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} set\_num\_doors(\textcolor{keywordtype}{int} d) \textcolor{keyword}{noexcept} \{ num\_doors = d; \}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} set\_leather\_seats(\textcolor{keywordtype}{bool} s) \textcolor{keyword}{noexcept} \{ leather\_seats = s; \}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} set\_miles(\textcolor{keywordtype}{int} m) \textcolor{keyword}{noexcept} \{ miles = m; \}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} set\_accidents(\textcolor{keywordtype}{int} a) \textcolor{keyword}{noexcept} \{ accidents = a; \}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} set\_num\_seats(\textcolor{keywordtype}{int} n) \textcolor{keyword}{noexcept} \{ num\_seats = n; \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{//getters}}
+\DoxyCodeLine{47     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{48     std::string get\_name() \{ \textcolor{keywordflow}{return} name; \}}
+\DoxyCodeLine{49     \textcolor{keywordtype}{double} get\_price() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} price; \}}
+\DoxyCodeLine{50     \textcolor{keywordtype}{double} get\_num\_doors() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} num\_doors; \}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} get\_leather\_seats() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} leather\_seats; \}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} get\_miles() \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} miles; \}}
+\DoxyCodeLine{53     \textcolor{keyword}{auto} get\_accidents() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{int} \{ \textcolor{keywordflow}{return} accidents; \}}
+\DoxyCodeLine{54     \textcolor{keyword}{auto} get\_num\_seats() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{int} \{ \textcolor{keywordflow}{return} num\_seats; \}}
 \DoxyCodeLine{55 }
-\DoxyCodeLine{56 }
-\DoxyCodeLine{62     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vehicle_a0a699f3fa5d55a292cb2fb8d411acc11}{print\_stats}}() \{}
-\DoxyCodeLine{63         std::cout << get\_name() << std::endl;}
-\DoxyCodeLine{64         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Price: \$"{}} << get\_price() << std::endl;}
-\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Miles: "{}} << get\_miles() << \textcolor{stringliteral}{"{} miles"{}} << std::endl;}
-\DoxyCodeLine{66         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Accidents: "{}} << get\_accidents() << std::endl;}
-\DoxyCodeLine{67         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Transmission Type: Automatic"{}} << std::endl;}
-\DoxyCodeLine{68         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Seats: "{}} << get\_num\_seats() << std::endl;}
-\DoxyCodeLine{69         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Doors: "{}} << get\_num\_doors() << std::endl;}
-\DoxyCodeLine{70         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Leather Seats: Yes"{}} << std::endl;}
-\DoxyCodeLine{71     \}}
-\DoxyCodeLine{72 \};}
-\DoxyCodeLine{73 }
-\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{//methods}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vehicle_a0a699f3fa5d55a292cb2fb8d411acc11}{print\_stats}}() \{}
+\DoxyCodeLine{70         std::cout << get\_name() << std::endl;}
+\DoxyCodeLine{71         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Price: \$"{}} << get\_price() << std::endl;}
+\DoxyCodeLine{72         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Miles: "{}} << get\_miles() << \textcolor{stringliteral}{"{} miles"{}} << std::endl;}
+\DoxyCodeLine{73         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Accidents: "{}} << get\_accidents() << std::endl;}
+\DoxyCodeLine{74         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Transmission Type: Automatic"{}} << std::endl;}
+\DoxyCodeLine{75         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Seats: "{}} << get\_num\_seats() << std::endl;}
+\DoxyCodeLine{76         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Doors: "{}} << get\_num\_doors() << std::endl;}
+\DoxyCodeLine{77         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Leather Seats: Yes"{}} << std::endl;}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
