@@ -1,0 +1,98 @@
+\hypertarget{_car_sales_service_8h_source}{}\doxysection{Car\+Sales\+Service.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//file: CarSalesService.h}}
+\DoxyCodeLine{2 \textcolor{comment}{//Header file for CarSalesService.cpp containing constant fields}}
+\DoxyCodeLine{3 \textcolor{comment}{//author Ethan Kramer}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef CARSALESSERVICE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define CARSALESSERVICE\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{//Constant fields}}
+\DoxyCodeLine{12 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{13 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} STOCK\_SIZE = 5;               \textcolor{comment}{// size of in\_stock vector}}
+\DoxyCodeLine{14 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} RUNNING = 5;                  \textcolor{comment}{// for program loop flag}}
+\DoxyCodeLine{15 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} OCTOBER = 10;                 \textcolor{comment}{// for expiration date on car in take\_payment()}}
+\DoxyCodeLine{16 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} STOP\_BROWSING = 5;            \textcolor{comment}{// to end browse\_cars()}}
+\DoxyCodeLine{17 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} MONTHS\_IN\_YEAR = 12.0;     \textcolor{comment}{// for date in payment}}
+\DoxyCodeLine{18 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} TEN\_PERCENT = .1;          \textcolor{comment}{// for payment (interest calculation for 2 years)}}
+\DoxyCodeLine{19 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} FLAG = 10;                    \textcolor{comment}{// for menu\_choice}}
+\DoxyCodeLine{20 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} ONE\_YEAR = 1;                 \textcolor{comment}{// for payment period }}
+\DoxyCodeLine{21 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TWO\_YEARS = 2;                \textcolor{comment}{// for payment period }}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{comment}{// Car Cases for Switch Statements}}
+\DoxyCodeLine{25 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{26 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} MAZDA3 = 1;}
+\DoxyCodeLine{27 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVRY\_COLORADO = 2;}
+\DoxyCodeLine{28 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TOYOTA\_CAMRY = 3;}
+\DoxyCodeLine{29 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HONDA\_CIVIC = 4;}
+\DoxyCodeLine{30 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HYUNDAI\_ELANTRA = 5;}
+\DoxyCodeLine{31 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} EXIT = 6;     }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} BROWSE = 1;}
+\DoxyCodeLine{34 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} PURCHASE = 2;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{// Mazda3 Stats}}
+\DoxyCodeLine{38 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{39 \textcolor{keyword}{const} std::string MAZDA3\_NAME = \textcolor{stringliteral}{"{}2012 Mazda 3"{}};}
+\DoxyCodeLine{40 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} MAZDA3\_PRICE = 5000;}
+\DoxyCodeLine{41 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} MAZDA3\_MILES = 100000;}
+\DoxyCodeLine{42 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} MAZDA3\_ACCIDENTS = 0;}
+\DoxyCodeLine{43 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} MAZDA3\_NUM\_SEATS = 5;}
+\DoxyCodeLine{44 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} MAZDA3\_NUM\_DOORS = 4;}
+\DoxyCodeLine{45 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} MAZDA3\_TRUNK\_SIZE = 13.2;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{// Chevy Colorado Stats}}
+\DoxyCodeLine{49 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{50 \textcolor{keyword}{const} std::string CHEVY\_COLORADO\_NAME = \textcolor{stringliteral}{"{}2016 Chevy Colorado"{}};}
+\DoxyCodeLine{51 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} CHEVY\_COLORADO\_PRICE = 13000;}
+\DoxyCodeLine{52 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVY\_COLORADO\_MILES = 70000;}
+\DoxyCodeLine{53 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVY\_COLORADO\_ACCIDENTS = 0;}
+\DoxyCodeLine{54 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVY\_COLORADO\_NUM\_SEATS = 5;}
+\DoxyCodeLine{55 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVY\_COLORADO\_NUM\_DOORS = 4;}
+\DoxyCodeLine{56 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} CHEVY\_COLORADO\_BED\_SIZE = 74.4;}
+\DoxyCodeLine{57 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} CHEVY\_COLORADO\_TOWING\_CAPACITY = 7000;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{//Toyota Camry Stats}}
+\DoxyCodeLine{61 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{62 \textcolor{keyword}{const} std::string TOYOTA\_CAMRY\_NAME = \textcolor{stringliteral}{"{}2018 Toyota Camry"{}};}
+\DoxyCodeLine{63 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} TOYOTA\_CAMRY\_PRICE = 22990;}
+\DoxyCodeLine{64 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TOYOTA\_CAMRY\_MILES = 51960;}
+\DoxyCodeLine{65 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TOYOTA\_CAMRY\_ACCIDENTS = 0;}
+\DoxyCodeLine{66 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TOYOTA\_CAMRY\_NUM\_SEATS = 5;}
+\DoxyCodeLine{67 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} TOYOTA\_CAMRY\_NUM\_DOORS = 4;}
+\DoxyCodeLine{68 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} TOYOTA\_CAMRY\_TRUNK\_SIZE = 15.1;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{comment}{//Honda Civic Stats}}
+\DoxyCodeLine{72 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{73 \textcolor{keyword}{const} std::string HONDA\_CIVIC\_NAME = \textcolor{stringliteral}{"{}2018 Honda Civic"{}};}
+\DoxyCodeLine{74 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} HONDA\_CIVIC\_PRICE = 20000;}
+\DoxyCodeLine{75 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HONDA\_CIVIC\_MILES = 16000;}
+\DoxyCodeLine{76 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HONDA\_CIVIC\_ACCIDENTS = 0;}
+\DoxyCodeLine{77 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HONDA\_CIVIC\_NUM\_SEATS = 5;}
+\DoxyCodeLine{78 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HONDA\_CIVIC\_NUM\_DOORS = 4;}
+\DoxyCodeLine{79 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} HONDA\_CIVIC\_TRUNK\_SIZE = 20.1;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{comment}{//Hyundai Elantra Stats}}
+\DoxyCodeLine{83 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{84 \textcolor{keyword}{const} std::string HYUNDAI\_ELANTRA\_NAME = \textcolor{stringliteral}{"{}2012 Hyundai Elantra"{}};}
+\DoxyCodeLine{85 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} HYUNDAI\_ELANTRA\_PRICE = 14000;}
+\DoxyCodeLine{86 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HYUNDAI\_ELANTRA\_MILES = 20000;}
+\DoxyCodeLine{87 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HYUNDAI\_ELANTRA\_ACCIDENTS = 1;}
+\DoxyCodeLine{88 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HYUNDAI\_ELANTRA\_NUM\_SEATS = 5;}
+\DoxyCodeLine{89 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} HYUNDAI\_ELANTRA\_NUM\_DOORS = 4;}
+\DoxyCodeLine{90 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{double} HYUNDAI\_ELANTRA\_TRUNK\_SIZE = 14.8;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

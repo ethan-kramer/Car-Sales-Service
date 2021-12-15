@@ -1,0 +1,71 @@
+\hypertarget{_car_8h_source}{}\doxysection{Car.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//file: Car.h}}
+\DoxyCodeLine{2 \textcolor{comment}{//Header file for Car class containing private and public fields and methods}}
+\DoxyCodeLine{3 \textcolor{comment}{//author: Ethan Kramer}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef CAR\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define CAR\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Vehicle.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_car}{Car}} :}
+\DoxyCodeLine{15     \textcolor{keyword}{public} \mbox{\hyperlink{class_vehicle}{Vehicle}}                                                                                       \textcolor{comment}{//LO2a. Include comments describing the visibility inheritance model}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:    \textcolor{comment}{// ENCAPSULATION: private (fields)}}
+\DoxyCodeLine{18     \textcolor{comment}{//fields}}
+\DoxyCodeLine{19     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{double} trunk\_size = 0;}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:     \textcolor{comment}{// ENCAPSULATION: public (methods and constructors)}}
+\DoxyCodeLine{22     \textcolor{comment}{//setters}}
+\DoxyCodeLine{23     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} set\_trunk\_size(\textcolor{keywordtype}{double} size) \textcolor{keyword}{noexcept}\{ trunk\_size = size; \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{//getters}}
+\DoxyCodeLine{27     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{28     \textcolor{keyword}{auto} get\_trunk\_size() \textcolor{keyword}{noexcept} -\/> \textcolor{keywordtype}{double} \{ \textcolor{keywordflow}{return} trunk\_size; \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{comment}{//constructors}}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_car}{Car}}() = \textcolor{keywordflow}{default}; \textcolor{comment}{// default constructor}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{//LO1b.Overload a constructor}}
+\DoxyCodeLine{36     \textcolor{comment}{//LO1c. Utilize an initialization list}}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_car}{Car}}(std::string n, \textcolor{keywordtype}{double} p, \textcolor{keywordtype}{int} m, \textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} s, \textcolor{keywordtype}{int} d, \textcolor{keywordtype}{double} ts) \{}
+\DoxyCodeLine{38         set\_name(n);}
+\DoxyCodeLine{39         set\_price(p);}
+\DoxyCodeLine{40         set\_miles(m);}
+\DoxyCodeLine{41         set\_accidents(a);}
+\DoxyCodeLine{42         set\_num\_seats(s);}
+\DoxyCodeLine{43         set\_num\_doors(d);}
+\DoxyCodeLine{44         set\_trunk\_size(ts); }
+\DoxyCodeLine{45     \}       \textcolor{comment}{//overloaded constructor setting fields}}
+\DoxyCodeLine{46     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{//methods}}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{50     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_car_a721210c5f752679504dc985ceddd179e}{print\_stats}}()\textcolor{keyword}{ override }\{                    \textcolor{comment}{//In a member function declaration or definition, override specifier ensures that the function is virtual }}
+\DoxyCodeLine{59         std::cout << get\_name() << std::endl;       \textcolor{comment}{//and is overriding a virtual function from a base class}}
+\DoxyCodeLine{60         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Price: \$"{}} << get\_price() << std::endl;}
+\DoxyCodeLine{61         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Miles: "{}} << get\_miles() << \textcolor{stringliteral}{"{} miles"{}} << std::endl;}
+\DoxyCodeLine{62         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Accidents: "{}} << get\_accidents() << std::endl;}
+\DoxyCodeLine{63         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Transmission Type: Automatic"{}} << std::endl;}
+\DoxyCodeLine{64         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Seats: "{}} << get\_num\_seats() << std::endl;}
+\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Number of Doors: "{}} << get\_num\_doors() << std::endl;}
+\DoxyCodeLine{66         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Leather Seats: Yes"{}} << std::endl;}
+\DoxyCodeLine{67         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)t Trunk Size: "{}} << get\_trunk\_size() << \textcolor{stringliteral}{"{} Cubic Feet"{}} << std::endl;}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
