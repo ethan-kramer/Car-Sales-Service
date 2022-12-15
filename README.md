@@ -14,8 +14,8 @@ This project exemplifies concepts like inheritance between classes, polymorphism
 # Program Purchase Car Feature
 ![purchase](https://user-images.githubusercontent.com/62119661/146275786-ec16d8da-3c2c-41d5-8cc1-747a9a7b1db9.png)
 
-# Warning list after running code analysis with Clang Tidy and C++ Core Check guidelines in Code Analysis
-![code_analysis_warnings](https://user-images.githubusercontent.com/62119661/146245551-c2136b32-f05c-4c4b-aa1d-b88a190330c7.png)
+  <!---# Warning list after running code analysis with Clang Tidy and C++ Core Check guidelines in Code Analysis  --->
+ <!---![code_analysis_warnings](https://user-images.githubusercontent.com/62119661/146245551-c2136b32-f05c-4c4b-aa1d-b88a190330c7.png)  --->
 
 # Acknowledgements
 * https://sites.google.com/site/profvanselow/course/cop-3003/projects-3003
